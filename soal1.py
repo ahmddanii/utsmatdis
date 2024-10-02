@@ -1,5 +1,3 @@
-# Program Implementasi dan Visualisasi Operasi pada Himpunan
-
 print('----------------------------------------')
 print('Nama     : Ahmad Dani')
 print('Program  : Himpunan')
@@ -17,12 +15,14 @@ gabungan = A | B
 irisan = A & B
 komplemen_A = A - B
 komplemen_B = B - A
+beda_setangkup = A ^ B
 
 # Munculkan output
 print("\nGabungan A ∪ B:", gabungan)
 print("Irisan A ∩ B:", irisan)
 print("Komplemen A terhadap B:", komplemen_A)
 print("Komplemen B terhadap A:", komplemen_B)
+print("Beda setangkup A △ B:", beda_setangkup)
 
 # Membuat diagram Venn untuk dua himpunan
 plt.figure(figsize=(8, 8))
