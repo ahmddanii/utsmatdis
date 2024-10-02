@@ -1,5 +1,5 @@
 print('----------------------------------------')
-print('Nama     : Petrus Fendiyanto')
+print('Nama     : Ahmad Dani')
 print('Program  : Fungsi')
 print('----------------------------------------')
 
@@ -22,17 +22,22 @@ def is_bijective(domain, codomain, function):
     # Fungsi bijektif jika dan hanya jika injektif dan surjektif
     return is_injective(domain, codomain, function) and is_surjective(domain, codomain, function)
 
-# Definisikan domain dan kodomain
-domain = {1, 2, 3}
-codomain = {2, 4, 6}
+# Meminta input dari pengguna untuk domain dan codomain
+domain = set(map(int, input("Masukkan elemen-elemen domain (pisahkan dengan spasi): ").split()))
+codomain = set(map(int, input("Masukkan elemen-elemen codomain (pisahkan dengan spasi): ").split()))
 
-# Definisikan fungsi f(x) = 2x
+# Meminta input untuk mendefinisikan fungsi. Misalnya f(x) = 2x, maka pengguna harus mengetik '2*x'.
+function_input = input("Masukkan fungsi f(x) (contoh: 2*x untuk f(x) = 2x): ")
+
+# Fungsi dinamis berdasarkan input pengguna
 def function(x):
-    return 2 * x
+    return eval(function_input)
 
+# Menampilkan domain, codomain, dan fungsi yang diinput
+print('----------------------------------------')
 print("Domain:", domain)
 print("Codomain:", codomain)
-print("f(x) = 2x")
+print(f"f(x) = {function_input}")
 print('----------------------------------------')
 
 # Cek injektifitas
